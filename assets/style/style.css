@@ -1,1 +1,17 @@
 /* BASIC STYLES HERE */
+
+.common {
+  background-color: bisque;
+}
+
+.uncommon {
+  background-color: lightblue;
+}
+
+.rare {
+  background-color: lightsalmon;
+}
+
+.ultra-rare {
+  background-color: rgb(235, 164, 235);
+}

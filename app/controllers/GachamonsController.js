@@ -10,7 +10,7 @@ export class GachamonsController {
   drawGachamons() {
     const gachamons = AppState.gachamons
     let littleGachamonCards = ''
-    gachamons.forEach(gachamon => littleGachamonCards += gachamon.littleCard())
+    gachamons.forEach(gachamon => littleGachamonCards += gachamon.littleCard)
     const gachamonsCatalogElem = document.getElementById('gachamon-catalog')
     gachamonsCatalogElem.innerHTML = littleGachamonCards
   }
