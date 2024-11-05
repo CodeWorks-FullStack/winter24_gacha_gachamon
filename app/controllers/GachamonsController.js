@@ -2,16 +2,15 @@ import { AppState } from "../AppState.js";
 
 export class GachamonsController {
   constructor() {
+    // NOTE when the page loads!
     console.log('Gachamons controller is loaded!');
-
+    this.drawGachamons()
   }
 
   drawGachamons() {
     const gachamons = AppState.gachamons
-    console.log('drawing!', gachamons);
     let littleGachamonCards = ''
     gachamons.forEach(gachamon => littleGachamonCards += gachamon.littleCard())
-    console.log('emojis!', littleGachamonCards);
     const gachamonsCatalogElem = document.getElementById('gachamon-catalog')
     gachamonsCatalogElem.innerHTML = littleGachamonCards
   }

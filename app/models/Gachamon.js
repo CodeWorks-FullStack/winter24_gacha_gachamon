@@ -11,11 +11,11 @@ export class Gachamon {
     <div class="col-md-2">
       <div class="border border-1 border-dark p-2 bg-warning">
         <div class="text-end">
-          <span class="fw-bold">Herbert</span>
+          <span class="fw-bold">${this.name}</span>
         </div>
         <hr>
         <div class="text-center">
-          <span class="display-1">🦃</span>
+          <span class="display-1">${this.emoji}</span>
         </div>
       </div>
     </div>
