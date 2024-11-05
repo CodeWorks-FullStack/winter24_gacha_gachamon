@@ -13,6 +13,10 @@ export class CoinsController {
 
   drawCoins() {
     const coinElem = document.getElementById('coin-count')
-    coinElem.innerText = AppState.coins.toString()
+    let coinEmojis = ''
+    for (let i = 0; i < AppState.coins; i++) {
+      coinEmojis += '🪙'
+    }
+    coinElem.innerText = coinEmojis
   }
 }
