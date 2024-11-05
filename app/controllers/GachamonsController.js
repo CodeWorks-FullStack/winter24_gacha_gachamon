@@ -4,7 +4,6 @@ import { gachamonsService } from "../services/GachamonsService.js";
 export class GachamonsController {
   constructor() {
     // NOTE when the page loads!
-    console.log('Gachamons controller is loaded!');
     AppState.on('activeGachamon', this.drawActiveGachamon)
     AppState.on('myGachamons', this.drawMyGachamons)
     this.drawGachamons()
@@ -13,6 +12,9 @@ export class GachamonsController {
   drawGachamons() {
     const gachamons = AppState.gachamons
     let littleGachamonCards = ''
+    // NOTE forEach is similar to a for loop, it is an array method that will execute a callback function for every item in an array
+    //                  ⬇️ this represents a single object in the array
+    //                  ⬇️            ⬇️ this is what we do with each object in the array
     gachamons.forEach(gachamon => littleGachamonCards += gachamon.littleCard)
     const gachamonsCatalogElem = document.getElementById('gachamon-catalog')
     gachamonsCatalogElem.innerHTML = littleGachamonCards
@@ -32,13 +34,12 @@ export class GachamonsController {
     gachamonsCatalogElem.innerHTML = littleGachamonCards
   }
 
+  // NOTE name is a parameter that is assigned when the function is called by the onclick in the model's littleCard HTML
   setActiveGachamon(name) {
-    console.log('clicked on gachamon with the name of ' + name);
     gachamonsService.setActiveGachamon(name)
   }
 
   rollForGachamon() {
-    console.log('rolling!');
     gachamonsService.getRandomGachamon()
   }
 }

@@ -2,8 +2,7 @@ import { AppState } from "../AppState.js";
 
 class CoinsService {
   addCoin() {
-    AppState.coins++
-    console.log('Coins is ' + AppState.coins);
+    AppState.coins++ // triggers coins listener 💂‍♀️!!!
   }
 
 }
