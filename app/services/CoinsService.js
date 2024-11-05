@@ -2,7 +2,6 @@ import { AppState } from "../AppState.js";
 
 class CoinsService {
   addCoin() {
-    console.log('Adding coin!');
     AppState.coins++
     console.log('Coins is ' + AppState.coins);
   }

@@ -1,3 +1,4 @@
+import { AppState } from "../AppState.js";
 import { coinsService } from "../services/CoinsService.js";
 
 export class CoinsController {
@@ -6,7 +7,12 @@ export class CoinsController {
   }
 
   addCoin() {
-    console.log('Adding coin!');
     coinsService.addCoin()
+    this.drawCoins()
+  }
+
+  drawCoins() {
+    const coinElem = document.getElementById('coin-count')
+    coinElem.innerText = AppState.coins.toString()
   }
 }
