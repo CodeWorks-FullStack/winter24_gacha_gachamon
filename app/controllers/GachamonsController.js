@@ -30,6 +30,6 @@ export class GachamonsController {
 
   rollForGachamon() {
     console.log('rolling!');
-
+    gachamonsService.getRandomGachamon()
   }
 }
