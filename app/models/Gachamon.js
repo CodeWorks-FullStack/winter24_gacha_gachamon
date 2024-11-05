@@ -23,4 +23,24 @@ export class Gachamon {
     </div>
     `
   }
+
+  get bigCard() {
+    return `
+    <div class="col-md-6">
+      <div class="border border-3 border-dark">
+        <div class="text-end">
+          <h1>Justin</h1>
+        </div>
+        <hr>
+        <div class="text-center">
+          <span class="active-emoji">🦃</span>
+        </div>
+        <div class="p-3">
+          <span class="bg-success rounded-pill px-4 py-1">common</span>
+          <p class="fs-1 text-center">⭐⭐⭐⭐⭐</p>
+        </div>
+      </div>
+    </div>
+    `
+  }
 }
