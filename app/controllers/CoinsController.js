@@ -8,7 +8,7 @@ export class CoinsController {
     // 💂‍♀️!!! ------------> AppState.coins++
     // 💂‍♀️!!! ------------> AppState.coins--
     // 💂‍♀️!!! ------------> AppState.coins = 10000000000
-    // 💂‍♀️!!! ------------> drawCoins()
+    // 💂‍♀️!!! drawCoins()
     AppState.on('coins', this.drawCoins)
   }
 

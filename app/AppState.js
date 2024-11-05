@@ -40,6 +40,9 @@ class ObservableAppState extends EventEmitter {
   /** @type {Gachamon} */
   activeGachamon = null
 
+  /** @type {Gachamon[]} */
+  myGachamons = []
+
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

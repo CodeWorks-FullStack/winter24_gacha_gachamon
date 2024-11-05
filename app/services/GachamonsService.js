@@ -17,6 +17,7 @@ class GachamonsService {
     const randomGachamon = AppState.gachamons[randomIndex]
     console.log('random gachamon!', randomGachamon);
     AppState.activeGachamon = randomGachamon
+    AppState.myGachamons.push(randomGachamon)
   }
 }
 
