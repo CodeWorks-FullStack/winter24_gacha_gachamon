@@ -5,6 +5,7 @@ export class GachamonsController {
   constructor() {
     // NOTE when the page loads!
     console.log('Gachamons controller is loaded!');
+    AppState.on('activeGachamon', this.drawActiveGachamon)
     this.drawGachamons()
   }
 
@@ -25,7 +26,6 @@ export class GachamonsController {
   setActiveGachamon(name) {
     console.log('clicked on gachamon with the name of ' + name);
     gachamonsService.setActiveGachamon(name)
-    this.drawActiveGachamon()
   }
 
   rollForGachamon() {

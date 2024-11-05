@@ -37,7 +37,9 @@ class ObservableAppState extends EventEmitter {
     }),
   ]
   // NOTE null represents an absence of value!
+  /** @type {Gachamon} */
   activeGachamon = null
+
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
