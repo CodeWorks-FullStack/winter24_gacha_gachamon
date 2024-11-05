@@ -14,4 +14,8 @@ export class GachamonsController {
     const gachamonsCatalogElem = document.getElementById('gachamon-catalog')
     gachamonsCatalogElem.innerHTML = littleGachamonCards
   }
+
+  setActiveGachamon(name) {
+    console.log('clicked on gachamon with the name of ' + name);
+  }
 }

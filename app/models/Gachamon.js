@@ -11,7 +11,7 @@ export class Gachamon {
   get littleCard() {
     return `
     <div class="col-md-2">
-      <div class="border border-1 border-dark p-2 ${this.rarity}">
+      <div onclick="app.GachamonsController.setActiveGachamon('${this.name}')" class="border border-1 border-dark p-2 ${this.rarity}" role="button">
         <div class="text-end">
           <span class="fw-bold">${this.name}</span>
         </div>

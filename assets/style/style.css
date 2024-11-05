@@ -15,3 +15,7 @@
 .ultra-rare {
   background-color: rgb(235, 164, 235);
 }
+
+.active-emoji {
+  font-size: 20rem;
+}
