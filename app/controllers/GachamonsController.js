@@ -16,8 +16,15 @@ export class GachamonsController {
     gachamonsCatalogElem.innerHTML = littleGachamonCards
   }
 
+  drawActiveGachamon() {
+    const gachamon = AppState.activeGachamon
+    const activeGachamonElem = document.getElementById('active-gachamon')
+    activeGachamonElem.innerHTML = gachamon.bigCard
+  }
+
   setActiveGachamon(name) {
     console.log('clicked on gachamon with the name of ' + name);
     gachamonsService.setActiveGachamon(name)
+    this.drawActiveGachamon()
   }
 }
