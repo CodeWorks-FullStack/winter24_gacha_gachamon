@@ -37,10 +37,24 @@ export class Gachamon {
         </div>
         <div class="p-3">
           <span class="${this.rarity} rounded-pill px-4 py-1">${this.rarity}</span>
-          <p class="fs-1 text-center">⭐⭐⭐⭐⭐</p>
+          <p class="fs-1 text-center">${this.rarityStars}</p>
         </div>
       </div>
     </div>
     `
+  }
+
+  // NOTE how to determine how many stars to assign by rarity
+  get rarityStars() {
+    if (this.rarity == 'common') {
+      return '⭐'
+    }
+    if (this.rarity == 'uncommon') {
+      return '⭐⭐'
+    }
+    if (this.rarity == 'rare') {
+      return '⭐⭐⭐'
+    }
+    return '⭐⭐⭐⭐'
   }
 }
