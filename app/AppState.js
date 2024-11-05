@@ -36,6 +36,8 @@ class ObservableAppState extends EventEmitter {
       emoji: '🐦‍🔥'
     }),
   ]
+  // NOTE null represents an absence of value!
+  activeGachamon = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
