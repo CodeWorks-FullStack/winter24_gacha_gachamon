@@ -7,7 +7,6 @@ class App {
 
   CoinsController = new CoinsController()
 
-
   // constructor() {
   //   if (USE_ROUTER) {
   //     this.router = router
