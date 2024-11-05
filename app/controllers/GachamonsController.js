@@ -27,4 +27,9 @@ export class GachamonsController {
     gachamonsService.setActiveGachamon(name)
     this.drawActiveGachamon()
   }
+
+  rollForGachamon() {
+    console.log('rolling!');
+
+  }
 }
