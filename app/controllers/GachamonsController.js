@@ -9,10 +9,10 @@ export class GachamonsController {
   drawGachamons() {
     const gachamons = AppState.gachamons
     console.log('drawing!', gachamons);
-    let gachamonEmojis = ''
-    gachamons.forEach(gachamon => gachamonEmojis += gachamon.emoji)
-    console.log('emojis!', gachamonEmojis);
+    let littleGachamonCards = ''
+    gachamons.forEach(gachamon => littleGachamonCards += gachamon.littleCard())
+    console.log('emojis!', littleGachamonCards);
     const gachamonsCatalogElem = document.getElementById('gachamon-catalog')
-    gachamonsCatalogElem.innerText = gachamonEmojis
+    gachamonsCatalogElem.innerHTML = littleGachamonCards
   }
 }
